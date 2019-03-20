@@ -4,7 +4,7 @@ node{
   }
   stage('Build'){
     
-    bat  "mvn clean -f demo-war"
+    bat  "mvn clean package -f demo-war"
   }
   
 }
