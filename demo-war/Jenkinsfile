@@ -3,7 +3,7 @@ node{
     git'https://github.com/sharanukoti/DemoRepo.git'
   }
   stage('Build'){
-    bat  "clean package"
+    bat  "mvn clean"
   }
   
 }
