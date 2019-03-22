@@ -1,10 +1,13 @@
 node{
-   stage('SCM Checkout'){
+   agent any
+   stage('--SCM Checkout--'){
     git'https://github.com/sharanukoti/DemoRepo.git'
   }
-  stage('Build'){
+  stage('--Build--'){
     
     bat  "mvn clean package -f demo-war"
   }
-  
+   stage('--deploy--'){
+      bat "mvn tomcat7:deploy tagret folder/*.war <<userName>>@10.235.194.141 tomcat/webapps/"
+   }
 }
