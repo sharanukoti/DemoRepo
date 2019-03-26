@@ -7,6 +7,6 @@ node{
     bat  "mvn clean package -f demo-war"
   }
   stage('--Deploy--'){
-    bat "mvn wildfly:deploy -DappDplySrvr.host=10.235.194.141 -DappDplySrvr.port=8180"
+    bat "mvn tomcat7:deploy -DappDplySrvr.host=10.235.194.141 -DappDplySrvr.port=5000"
   }
 }
