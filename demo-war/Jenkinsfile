@@ -1,5 +1,5 @@
 node{
-   agent any
+   
    stage('--SCM Checkout--'){
      git'https://github.com/sharanukoti/DemoRepo.git'
   }
