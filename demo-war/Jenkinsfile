@@ -6,5 +6,7 @@ node{
   stage('--Build--'){
     bat  "mvn clean package -f demo-war"
   }
-  
+  stage('--Deploy--'){
+    bat "mvn tomcat7:deploy tagret/*.war -DappDplySrvr.host=10.235.194.141 -DappDplySrvr.port=5000"
+  }
 }
