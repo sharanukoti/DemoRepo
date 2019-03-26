@@ -1,10 +1,9 @@
 node{
    agent any
    stage('--SCM Checkout--'){
-    git'https://github.com/sharanukoti/DemoRepo.git'
+     git'https://github.com/sharanukoti/DemoRepo.git'
   }
   stage('--Build--'){
-    
     bat  "mvn clean package -f demo-war"
   }
   
