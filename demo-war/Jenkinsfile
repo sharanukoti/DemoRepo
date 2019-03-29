@@ -7,7 +7,7 @@ node{
   }
   stage('--Deploy--'){
     dir('C:\\Users\\skoti5\\.jenkins\\workspace\\Pipeline_BuildDeploy\\demo-war') {
-      bat "mvn tomcat7:run -DappDplySrvr.host=10.235.194.141 -DappDplySrvr.port=5000"
+      bat "mvn tomcat7:deploy -DappDplySrvr.host=10.235.194.141 -DappDplySrvr.port=5000"
     }   
    //bat "mvn tomcat7:deploy -DappDplySrvr.host=10.235.194.141 -DappDplySrvr.port=5000"
   }
